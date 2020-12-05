@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/form/style.css">
+</head>
+<body>
+<div>
+    <img class="image-logo" src="/public/form/logo.png" alt="logo">
+</div>
+<div class="body-dang-ky">
+    <div class="box-dang-ky">
+        <h2 class="title-form">ĐĂNG KÝ</h2>
+        <form class="form-1" id="formone" method="POST" action="/user/dangky">
+            <div class="box-1 name">
+                <label class="text-lable">Họ và tên</label>
+                <input id="input_name" class="input-text" type="text" placeholder="Nguyễn Văn A"
+                       name="username">
+                <span id="thongbaoloi1" style="color: red"></span>
+            </div>
+            <div class="box-1 gmail">
+                <label class="text-lable">Nhập email của bạn</label>
+                <input id="input-email" class="input-text" type="email" placeholder="abc***@gmail.com"
+                       name="usergmail">
+                <span id="thongbaoloi2" style="color: red"></span>
+            </div>
+            <div class="box-1 password ">
+                <label class="text-lable">Nhập mật khẩu</label>
+                <input class="input-text pass1" type="password" placeholder="********" name="userpass1">
+                <span class="inforRetypePass1" style="color: red"></span>
+            </div>
+            <div class="box-1 password">
+                <label class="text-lable">Nhập lại mật khẩu</label>
+                <input class="input-text pass2" type="password" placeholder="********" name="userpass2">
+                <span class="inforRetypePass2" style="color: red"></span>
+            </div>
+            <div class="button-submit">
+                <div>
+                    <input type="checkbox" id="agree-check" name="xacnhandieukhoan" value="">
+                    <label for="vehicle1"> Đồng ý điều khoản</label><br>
+                </div>
+                <button class="button-dangky" type="button" id="guiform">Đăng ký</button>
+            </div>
+            <span><a href="/user/dangnhap">Tôi đã có tài khoản!</a></span>
+        </form>
+    </div>
+    <% if(error){ %>
+        <p style="color:#fff; display: block; background: red; height: 50px; text-align: center; line-height:50px; border-radius: 2px "><%= error %></p>
+    <% } %>
+
+</div>
+<script src="/public/form/validate.js">
+</script>
+</body>
+</html>
+  

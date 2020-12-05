@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hoc javascrip</title>
+	<style>
+		.demo{
+			display: inline;
+			margin: 10px;
+			padding: 14px;
+			background-color: red;
+			cursor: pointer;
+			border-radius: 3px;
+		}
+	</style>
+</head>
+<body>
+	<h2>Dữ liệu trả về tại đây!</h2>
+	<div id="tradulieuve">
+		<div class="demo" data-id="demo1">So1</div>
+		<div class="demo" data-id="demo2">So2</div>
+		<div class="demo" data-id="demo3">So3</div>
+		<div class="demo" data-id="demo4">So4</div>
+	</div>
+	<script>
+		var element = document.querySelectorAll(".demo");
+		element.forEach(function(item){
+			item.addEventListener("click", function(){
+				var idData = item.getAttribute('data-id');
+				console.log(idData);
+			})
+		})
+	</script>
+</body>
+</html>

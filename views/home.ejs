@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppChat</title>
+    <link href="./public/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="./public/style/style.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- nơi hiển thị các công cụ cài đặt  -->
+    <div class="setting-left">
+        <% var urlLink = "./public" + user.avatar; %>
+        <div class="avatar-image" style="background-image:url(<%= urlLink %>)">
+        </div>
+        <ul class="menu-setting">
+            <li class="menu-item" id="trangchuId"><i class="iconmenu fas fa-home"></i>
+                <!-- 					<a href="#">
+                                        <i class="iconmenu fas fa-home"></i>
+                                    </a> -->
+            </li>
+            <li class="menu-item" id="tinnhanId"><i class="iconmenu fas fa-comments"></i>
+                <!-- 					<a href="#">
+                                        <i class="iconmenu fas fa-comments"></i>
+                                    </a>
+                                </li> -->
+            <li class="menu-item" id="thongbaoId"><i class="iconmenu far fa-bell"></i>
+                <span class="soluongtinnhanchuadoc" id="soluongthongbaochuaxem"><%= user.information.length %></span>
+                <!-- 					<a href="#">
+                                        <i class="iconmenu far fa-bell"></i>
+                                    </a> -->
+            </li>
+        </ul>
+        <div class="setting-botton">
+            <a href="#">
+                <i class="iconmenu fas fa-cog"></i>
+            </a>
+            <div class="box-thiet-lap">
+                <span><a href="home/update" style="text-decoration: none; color: black">Thông tin & mật khẩu</a></span>
+                <span id="logout"><a href="#" style="text-decoration: none; color: black">Đăng xuất</a></span>
+                <span>Trợ giúp</span>
+            </div>
+            <script>
+                var dangxuat = document.getElementById("logout");
+                dangxuat.addEventListener("click", function () {
+                    document.cookie = "cookieAuth=";
+                    location.reload();
+                })
+            </script>
+        </div>
+
+
+    </div>
+    <!-- Nơi hiển thị thông báo các hộp tin nhắn chat -->
+    <div class="contain-chat">
+        <div class="avatar_search">
+            <div class="name-acount">
+                <span id="accountID" data-id="<%= user._id %>"><%= user.username %></span>
+            </div>
+            <div>
+                <input id="otimkiemId" class="otimkiem" type="text" placeholder="Tìm bạn bè, nhóm, tin nhắn">
+                <i id="searchId" class="fas fa-search"></i>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <select class="status" name="status">
+                <option value="tatcatinnhan">Tất cả tin nhắn</option>
+                <option value="tinnhanchuadoc">Tin nhắn chưa đọc</option>
+                <option value="tinnhantunguoila">Tin nhắn từ người lạ</option>
+            </select>
+            <span class="checktinnhan">Đánh dấu đã đọc</span>
+            <div class="hoptinnhan" id="hoptinnhan-sidebar">
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- nơi hiển thị tin nhắn chat giữa người A và người B -->
+    <div class="chuaNoiDungTinNhan">
+        <div class="header-box">
+            <!-- THÔNG TIN BẠN BÈ -->
+            <img class="img-vatar-friend-2" id="imageFriend">
+            <div class="info-friend">
+                <span class="main-name" id="nameFriend"></span>
+                <span>Bạn bè</span>
+            </div>
+            <div class="tuongtacgoidien">
+                <a href="#">
+                    <i class="fas fa-camera-retro"></i>
+                </a>
+                <a href="#">
+                    <i class="fas fa-video"></i>
+                </a>
+            </div>
+        </div>
+        <div class="noidungchat" id="idnoidungchat">
+
+<!--            <div class="tinnhanguidi">-->
+<!--                <img class="img-vatar-friend-3" style="background-image: url(./public/image/avatar-friend-2.jpg)">-->
+<!--                <div class="mess-friend">-->
+<!--                    <span>Xin chào, mình có thể làm quen với bạn không?</span>-->
+<!--                    <br>-->
+<!--                    <span>Mình là Huy, mình người Quảng Nam.</span>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="mess-by-me">-->
+<!--                <span>Oke, rất vui được làm quen cùng bạn</span>-->
+<!--            </div>-->
+
+<!--            <div class="tinnhanguidi">-->
+<!--                <img class="img-vatar-friend-3" style="background-image: url(./public/image/avatar-friend-2.jpg)">-->
+<!--                <div class="mess-friend">-->
+<!--                    <span>Xin chào, mình có thể làm quen với bạn không?</span>-->
+<!--                    <br>-->
+<!--                    <span>Mình là Huy, mình người Quảng Nam.</span>-->
+<!--                </div>-->
+<!--            </div>-->
+
+        </div>
+        <div class="guitinnhan">
+            <input id="onhaptinnhan" class="onhaptinnhan" type="text" placeholder="Nhập nội dung tin nhắn....">
+            <i class="iconsend fas fa-paper-plane" id="idguitin"></i>
+        </div>
+    </div>
+</div>
+<script src="socket.io/socket.io.js"></script>
+<script src="./public/js/action.js"></script>
+<script src="./public/js/jquery.js"></script>
+<script src="./public/js/home.js"></script>
+<!--<script src="./public/js/socketio.js"></script>-->
+</body>
+</html>

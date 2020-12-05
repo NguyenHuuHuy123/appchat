@@ -1,0 +1,368 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: roboto;
+}
+
+
+/*Chứa các khối layout*/
+.container{
+	display: flex;
+
+}
+
+
+/*Chứa các công cụ cài đặt*/
+.setting-left{
+	flex-grow: 1;
+	height: 100%;
+	width: 67px;
+	background-color: blue;
+	position: fixed;
+	background-image: linear-gradient(#0cb3ff,#0068ff);
+	display: flex;
+	align-items:center;
+	flex-direction: column;
+	margin-right: 67px;
+}
+
+.avatar-image{
+	height: 45px;
+	width: 45px;
+	border-radius: 100%;
+	border: 1px white solid;
+	background-size: cover;
+	background-position:center;
+	margin-top: 10px;
+}
+.menu-setting{
+	padding: 0px;
+	margin: 40px 0px;
+}
+
+.menu-item{
+	list-style-type: none;
+	padding: 20px 20px ;
+	box-sizing: border-box;
+	cursor: pointer;
+	position: relative;
+}
+
+.iconmenu{
+	font-size: 24px;
+	color: white;
+}
+
+/*Box setting - thiết lập hình ảnh thông tin*/
+.setting-botton{
+	position: absolute;
+	bottom: 0px;
+	padding: 20px 20px ;
+}
+
+
+.box-thiet-lap{
+	border: 1px solid black;
+	width: 200px;
+	/*height: 100px;*/
+	background-color: white;
+	position: absolute;
+	top: -100px;
+	left: 40px;
+	display: none;
+}
+
+.setting-botton:hover{
+	background-color: #0cb3ff;
+}
+
+
+.box-thiet-lap span{
+	padding: 10px;
+	display: block;
+	color: black;
+	border-bottom: 1px solid #ededed;
+	cursor: pointer;
+}
+
+.box-thiet-lap span:hover{
+	background-color: #0cb3ff;
+	color: white;
+}
+
+
+
+.menu-item:hover{
+	background-color: #43bcf3
+}
+
+/*Chứa các box tin nhắn của người dùng*/
+.contain-chat{
+	flex-grow: 1;
+	margin-left: 67px;
+	border-right: 1px solid #dadcdd;
+	height: 750px;
+	/*padding: 10px 15px;*/
+}
+
+.avatar_search{
+	padding: 10px 15px;
+}
+
+.name-acount{
+	margin: 5px 0px;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.otimkiem{
+	margin: 5px 0px;
+	border-radius: 16px;
+	background-color: #ededed;
+    border: 1px solid #ededed;
+    padding: 3px 10px;
+    font-size: 15px;
+    width: 70%;
+    outline:none;
+}
+.otimkiem:hover{
+	box-shadow: 1px 1px 10px 0 rgba(0,0,0,.2);
+    background: #fff;
+    border: 1px solid #4380ff;
+}
+
+.otimkiem:focus{
+	box-shadow: 1px 1px 10px 0 rgba(0,0,0,.2);
+    background: #fff;
+    border: 1px solid #4380ff;
+}
+.fas.fa-search{
+	color: #534c4c;
+	font-size: 15px;
+	padding: 0 10px;
+}
+.fas.fa-search:hover{
+	color: #4380ff;
+
+}
+.status{
+	border: 0px;
+	font-size: 13px;
+	font-weight: bold;
+	color: #72808e;
+	padding: 10px 15px;
+	/*padding: 10px 15px;*/
+}
+
+.checktinnhan{
+	font-size: 13px;
+	color: #72808e;
+	padding: 10px 0px;
+}
+
+.item_tinnhan{
+	display: flex;
+	padding: 15px 15px;
+	/*padding: 10px 15px;*/
+	cursor: pointer;
+}
+.item_tinnhan:hover{
+	background-color: #f8f6f6;
+}
+
+.img-vatar-friend{
+	height: 52px;
+	width: 52px;
+	border-radius: 100%;
+	background-size: cover;
+	background-position: center;
+}
+
+.box-item-mess{
+	padding-left: 15px;
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+}
+
+.name-frient{
+	font-size: 17px;
+	/*font-weight: bold;*/
+	padding: 5px 0px ;
+}
+.content-mess-short{
+	color: #72808e;
+	font-size: 14px;
+}
+
+.thongbao{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.soluongtinnhanchuadoc{
+	background-color: #2196F3;
+	border-radius: 10px 10px 10px 10px;
+	padding: 2px 4px;
+	color: #ffffff;
+}
+
+#soluongthongbaochuaxem{
+	text-align: center;
+	background-color: #e65656;
+	position: absolute;
+	height: 17px;
+	width: 17px;
+	top: 2px;
+	border-radius: 100px;
+	/*right: 0px;*/
+}
+/*Chứa nội dung tin nhắn*/
+.chuaNoiDungTinNhan{
+	flex-grow: 17;
+	background-color: #f4f4f4;
+}
+
+.header-box{
+	display: flex;
+	padding: 15px 15px;
+	background-color: #ffffff;
+	align-items: center;
+	box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2)
+	/*position: relative;*/
+
+}
+
+.img-vatar-friend-2{
+	height: 62px;
+	width: 62px;
+	border-radius: 100%;
+	background-size: cover;
+}
+
+.info-friend{
+	padding-left: 15px;
+	display: flex;
+	flex-direction: column;
+}
+
+.main-name{
+	font-weight: bold;
+	font-size: 24px
+}
+
+.tuongtacgoidien{
+	position: absolute;
+	right: 20px
+}
+
+.tuongtacgoidien a > i{
+	font-size: 30px;
+	padding: 20px;
+	color: #78797c;
+}
+/*Css nội dung tin nhăn A và B*/
+.noidungchat{
+	padding: 10px;
+	overflow: scroll;
+	height: 600px;
+	/*flex-direction: column-reverse;*/
+	/*scroll-behavior: smooth;*/
+}
+
+.img-vatar-friend-3{
+	height: 40px;
+	width: 40px;
+	border-radius: 100%;
+	background-size: cover;
+	margin: 0px 10px;
+}
+
+.tinnhanguidi{
+	display: flex;
+	/*margin: 10px 10px;*/
+}
+
+.mess-friend span{
+	display: inline-block;
+	padding: 10px;
+	border-radius: 20px;
+	background-color: #ffffff;
+	margin-top: 5px;
+}
+
+.mess-by-me{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.mess-by-me span{
+	padding: 10px;
+	border-radius: 20px;
+	background-color: #ffffff;
+	margin-top: 5px;
+	background-color: #09a4ff52;
+}
+
+
+
+/*Gửi tin nhắn*/
+
+
+.guitinnhan{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 50px;
+	width: 74%;
+	background-color: #ffffff;
+	border-top: 1px solid #d5d4d4;
+	position: fixed;
+	bottom: 0px;
+}
+
+.onhaptinnhan{
+	width: 90%;
+	border: none;
+	padding: 10px;
+	font-size: 16px;
+	outline: none;
+}
+
+
+
+.iconsend{
+	font-size: 30px;
+	padding: 20px;
+	color: #0cb3ff;
+}
+
+.iconsend:hover{
+	color: #0b8dc7;
+}
+
+/*Form chỉnh sửa thông tin*/
+.form-1{
+	position: absolute;
+	top: 50%;
+	left:50%;
+	background-color: white;
+	/*text-align: center;*/
+	padding: 20px;
+}
+
+/*NUt ket ban*/
+.btn-ketban{
+	border: 1px solid #82a0cb;
+	font-size: 14px;
+	border-radius: 7px;
+	padding: 4px 4px ;
+}
+.btn-ketban:hover{
+	background-color: #0068ff;
+	color: #ffffff;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/public/form/style.css">
+  <style>
+    .image-logo{
+      border-radius: 100%;
+      background-size: cover;
+    }
+    .button-submit{
+      display: flex;
+      justify-content: flex-end;
+    }
+    .button-dangky{
+      margin-left: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+      <% 
+      var userName = user.username;
+      var userGmail = user.gmail;
+      var urlLink = "/public" + user.avatar;
+       %>
+    <img class="image-logo" src=<%=urlLink %> alt="logo">
+  </div>
+  <div class="body-dang-ky">
+    <div class="box-dang-ky">
+      <h2 class="title-form">CẬP NHẬT THÔNG TIN</h2>
+
+      <form class="form-1" id="formone" method="POST" action="/home/update" enctype="multipart/form-data">
+        <div class="box-1 name">
+          <label class="text-lable">Tên người dùng</label>
+          <input id="input_name" class="input-text" type="text" value="<%=userName %>"
+          name="username">
+          <span id="thongbaoloi1" style="color: red"></span>
+        </div>
+        <div class="box-1 gmail">
+          <label class="text-lable">Nhập email của bạn</label>
+          <input id="input-email" class="input-text" type="email" value="<%=userGmail %>" 
+          name="usergmail" disabled="true" >
+          <span id="thongbaoloi2" style="color: red"></span>
+        </div>
+        <div class="box-1 password ">
+          <label class="text-lable">Thay đổi mật khẩu</label>
+          <input class="input-text pass1" type="password" placeholder="Nhập mật khẩu mới" name="password">
+          <span class="inforRetypePass1" style="color: red"></span>
+        </div>
+        <div class="box-1 avatar ">
+          <label class="text-lable">Thay đổi avatar</label>
+          <input class="input-file avatarFile" type="file" placeholder="Tải ảnh lên" name="avatar">
+        </div>
+        <div class="button-submit">
+          <button class="button-dangky" type="button"><a href="/home" style="text-decoration: none; color: white">Cancel</a></button>
+          <button class="button-dangky" type="submit" id="save01">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+  

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="/public/form/style.css">
+	<style>
+		.addinfor{
+			margin-top: 10px;
+			display: flex;
+			justify-content: space-between;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img class="image-logo" src="/public/form/logo.png" alt="logo">
+	</div>
+	<div class="body-dang-ky">
+		<div class="box-dang-ky">
+			<h2 class="title-form">ĐĂNG NHẬP</h2>
+			<form class="form-1 formdangnhap2" id="formdangnhap2" method="POST" action="/user/dangnhap">
+				<div class="box-1 name">
+					<label class="text-lable">Nhập gmail</label>
+					<input id="input_name" class="input-text" type="text" placeholder="example**@gmail.com" name="userGmail" autofocus>
+					<span id="thongbaoloi1" style="color: red"></span>
+				</div>
+				<div class="box-1 password">
+					<label class="text-lable">Nhập mật khẩu</label>
+					<input class="input-text" type="password" placeholder="Nhập mật khẩu" name="userPass">
+				</div>
+				<div class="button-submit">
+					<div>
+						<input type="checkbox" id="luuPass" name="luuPass" value="">
+	  					<label for="vehicle1">Lưu mật khẩu</label><br>
+					</div>
+					<button id="button-submit" class="button-dangky" type="submit">Đăng nhập</button>
+				</div>
+				<div class="addinfor">
+					<a href="/user/dangky" class="yeuCauDangKyTaiKhoan">Bạn chưa có tài khoản?</a>
+					<a href="/user/recoverypassword" class="yeuCauDangKyTaiKhoan">Quên mật khẩu?</a>
+				</div>
+			</form>
+		</div>
+			
+	</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+body {
+	background-color: #f1f1f1;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+ 	align-items: center;
+ 	margin-top: 60px ;
+}
+
+.image-logo{
+	width:100px;
+	height:100px;
+	margin-bottom: 20px;
+}
+
+.body-dang-ky{
+	background-color: #fff;
+	padding: 20px 20px;
+	height: 400px;
+	width: 350px;
+	border-radius: 2px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.title-form{
+	text-align: center;
+}
+
+.box-1{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.text-lable{
+	display: block;
+	margin-bottom: 5px;
+}
+
+.input-text{
+	width: 100%;
+	height: 30px;
+	border: 1px solid;
+}
+
+input:focus {
+	border: 2px solid #6bf800;
+}
+
+.button-submit{
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+}
+
+.button-dangky{
+	width: 100px;
+    height: 36px;
+	background-color: #3F51B5;
+	color: #fff;
+	border: none;
+	border-radius: 2px;
+}
+
+.yeuCauDangKyTaiKhoan{
+	/*text-decoration: none;*/
+	color: #888;
+	/*font-size: 11px;*/
+}
